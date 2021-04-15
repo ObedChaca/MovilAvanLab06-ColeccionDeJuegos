@@ -13,6 +13,7 @@
 		7D9D22EC2628986600061CB2 /* lab06_ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D9D22EA2628986600061CB2 /* lab06_ColeccionDeJuegos.xcdatamodeld */; };
 		7D9D22EE2628986700061CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D9D22ED2628986700061CB2 /* Assets.xcassets */; };
 		7D9D22F12628986700061CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9D22EF2628986700061CB2 /* LaunchScreen.storyboard */; };
+		7D9D22FE26289A2F00061CB2 /* CreateOrUpdateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9D22FD26289A2F00061CB2 /* CreateOrUpdateGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D9D22ED2628986700061CB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D9D22F02628986700061CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9D22F22628986700061CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D9D22FD26289A2F00061CB2 /* CreateOrUpdateGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrUpdateGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		7D9D22E22628986600061CB2 /* lab06-ColeccionDeJuegos */ = {
 			isa = PBXGroup;
 			children = (
+				7D9D22FC262899E300061CB2 /* Resources */,
+				7D9D22FB262899DB00061CB2 /* Utils */,
+				7D9D22FA262899CC00061CB2 /* Views */,
+				7D9D22F9262899C300061CB2 /* Models */,
+				7D9D22F8262899AC00061CB2 /* Cotrollers */,
 				7D9D22E32628986600061CB2 /* AppDelegate.swift */,
-				7D9D22E52628986600061CB2 /* ViewController.swift */,
-				7D9D22E72628986600061CB2 /* Main.storyboard */,
-				7D9D22ED2628986700061CB2 /* Assets.xcassets */,
-				7D9D22EF2628986700061CB2 /* LaunchScreen.storyboard */,
 				7D9D22F22628986700061CB2 /* Info.plist */,
 				7D9D22EA2628986600061CB2 /* lab06_ColeccionDeJuegos.xcdatamodeld */,
 			);
 			path = "lab06-ColeccionDeJuegos";
+			sourceTree = "<group>";
+		};
+		7D9D22F8262899AC00061CB2 /* Cotrollers */ = {
+			isa = PBXGroup;
+			children = (
+				7D9D22E52628986600061CB2 /* ViewController.swift */,
+				7D9D22FD26289A2F00061CB2 /* CreateOrUpdateGameViewController.swift */,
+			);
+			path = Cotrollers;
+			sourceTree = "<group>";
+		};
+		7D9D22F9262899C300061CB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D9D22FA262899CC00061CB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D9D22EF2628986700061CB2 /* LaunchScreen.storyboard */,
+				7D9D22E72628986600061CB2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D9D22FB262899DB00061CB2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D9D22FC262899E300061CB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D9D22ED2628986700061CB2 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +183,7 @@
 			files = (
 				7D9D22E62628986600061CB2 /* ViewController.swift in Sources */,
 				7D9D22E42628986600061CB2 /* AppDelegate.swift in Sources */,
+				7D9D22FE26289A2F00061CB2 /* CreateOrUpdateGameViewController.swift in Sources */,
 				7D9D22EC2628986600061CB2 /* lab06_ColeccionDeJuegos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
