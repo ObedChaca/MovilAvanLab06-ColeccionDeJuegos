@@ -13,20 +13,35 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab06_ColeccionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="lab06_ColeccionDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-M2-QAQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fQx-M2-QAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aAt-r5-9u7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fQx-M2-QAQ" secondAttribute="bottom" id="aRr-VS-NHO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fQx-M2-QAQ" secondAttribute="trailing" id="ebo-mP-fnJ"/>
+                            <constraint firstItem="fQx-M2-QAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jV3-vg-L42"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rEd-4l-vDi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gYc-gZ-yl0">
                             <connections>
-                                <segue destination="2Jt-yq-S7L" kind="show" id="HPA-wk-z77"/>
+                                <segue destination="2Jt-yq-S7L" kind="show" identifier="juegoSegue" id="HPA-wk-z77"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="fQx-M2-QAQ" id="QTM-Hn-qp7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +74,19 @@
                                 <state key="normal" title="Agregar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="agregarTapped:" destination="2Jt-yq-S7L" eventType="touchUpInside" id="3we-2F-P5J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCs-Ju-SaO">
+                                <rect key="frame" x="40" y="594" width="334" height="30"/>
+                                <color key="backgroundColor" red="0.14471533889999999" green="0.50202071670000004" blue="0.89521342520000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Eliminar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="2Jt-yq-S7L" eventType="touchUpInside" id="9p5-MH-fjm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,8 +95,11 @@
                             <constraint firstItem="LB5-Kq-FeF" firstAttribute="leading" secondItem="L7j-Ll-iBA" secondAttribute="leading" constant="40" id="8aw-xm-oQx"/>
                             <constraint firstItem="L7j-Ll-iBA" firstAttribute="trailing" secondItem="LB5-Kq-FeF" secondAttribute="trailing" constant="40" id="JdE-eV-E2R"/>
                             <constraint firstItem="L7j-Ll-iBA" firstAttribute="trailing" secondItem="jDr-zR-jW1" secondAttribute="trailing" constant="40" id="ODw-Kc-z2W"/>
+                            <constraint firstItem="L7j-Ll-iBA" firstAttribute="trailing" secondItem="qCs-Ju-SaO" secondAttribute="trailing" constant="40" id="OeT-mn-X4P"/>
                             <constraint firstItem="jDr-zR-jW1" firstAttribute="leading" secondItem="L7j-Ll-iBA" secondAttribute="leading" constant="40" id="Ujb-ZZ-3qF"/>
                             <constraint firstItem="LB5-Kq-FeF" firstAttribute="top" secondItem="6YU-8e-CtF" secondAttribute="bottom" constant="37" id="X8r-Vj-v1P"/>
+                            <constraint firstItem="qCs-Ju-SaO" firstAttribute="top" secondItem="jDr-zR-jW1" secondAttribute="bottom" constant="26" id="YYb-Z6-b3t"/>
+                            <constraint firstItem="qCs-Ju-SaO" firstAttribute="leading" secondItem="L7j-Ll-iBA" secondAttribute="leading" constant="40" id="fJv-P7-MPa"/>
                             <constraint firstItem="6YU-8e-CtF" firstAttribute="top" secondItem="L7j-Ll-iBA" secondAttribute="top" constant="49" id="kED-gp-gtk"/>
                             <constraint firstItem="6YU-8e-CtF" firstAttribute="centerX" secondItem="xqz-Lt-iNu" secondAttribute="centerX" id="qcL-9L-T8g"/>
                         </constraints>
@@ -82,8 +113,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="jDr-zR-jW1" id="Y1D-16-W9a"/>
                         <outlet property="btnCameraOrGalery" destination="RHV-Xh-wyk" id="rxI-kQ-w8V"/>
+                        <outlet property="eliminarBoton" destination="qCs-Ju-SaO" id="yYi-G1-j8P"/>
                         <outlet property="imageView" destination="6YU-8e-CtF" id="6U5-HG-ekj"/>
+                        <outlet property="tituloTextField" destination="LB5-Kq-FeF" id="b5V-3o-7W0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPQ-Ih-znp" userLabel="First Responder" sceneMemberID="firstResponder"/>
